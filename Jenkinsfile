@@ -31,7 +31,9 @@ spec:
       path: /var/run/docker.sock
 """
     }
-  }
+
+}
+
 
 
 // Configuration à modifier
@@ -46,11 +48,19 @@ spec:
     }
 
     stage('Test'){
-    steps{
-    container('maven'){
-     sh 'mvn test'
-     }
+      steps{
+        container('maven'){
+          sh 'mvn test'
+         }
+      }
     }
+
+    stage('Docker Build'){
+      steps{
+        container('docker'){
+          sh 'docker build -t my-app:$BUILD_NUMBER .'
+        }
+      }
     }
 
 }
