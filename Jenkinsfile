@@ -45,5 +45,11 @@ spec:
       }
     }
 
+    stage('Test'){
+    steps{
+     echo 'Stage Test'
+    }
+    }
+
 }
 }
