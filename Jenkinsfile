@@ -81,20 +81,6 @@ spec:
     }
 
 
-// Pour s'exécuter sur la branches master et develop
-stage('Stage name') {
-      when {
-        anyOf {
-          branch 'master';
-          branch 'develop'
-        }
-      }
-      steps {
-        ...
-      }
-    }
-
-}
 
 post {
    always {
