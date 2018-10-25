@@ -47,7 +47,7 @@ spec:
 
     stage('Test'){
     steps{
-     echo 'Stage Test'
+     sh 'mvn test'
     }
     }
 
