@@ -61,6 +61,7 @@ spec:
           branch 'master';
           branch 'develop'
         }
+      }
       steps{
         container('docker'){
           sh 'docker build -t my-app:$BUILD_NUMBER .'
