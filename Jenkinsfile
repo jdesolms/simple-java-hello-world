@@ -69,7 +69,14 @@ spec:
           sh 'docker run my-app:$BUILD_NUMBER'
         }
       }
+
     }
 
 }
+
+post {
+   always {
+     junit 'target/surefire-reports/*.xml'
+   }
+ }
 }
